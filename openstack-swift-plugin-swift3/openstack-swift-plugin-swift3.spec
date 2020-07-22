@@ -8,7 +8,7 @@ Version:        1.14.0
 Release:        1%{?dist}
 %define         targetversion %{version}
 URL:            https://github.com/open-io/swift3
-Source0:        https://github.com/open-io/swift3/archive/%{version}-openio.tar.gz
+Source0:        https://github.com/open-io/swift3/archive/%{version}.tar.gz
 %else
 # Testing purpose only. Do not modify.
 %define         date %(date +"%Y%m%d%H%M")
@@ -42,7 +42,7 @@ Amazon S3 API.
 
 %prep
 %if %{?_with_test:0}%{!?_with_test:1}
-%setup -q -n swift3-%{version}-openio
+%setup -q -n swift3-%{version}
 %else
 # Testing purpose only. Do not modify.
 %setup -q -n swift3-%{tarversion}
